@@ -1,0 +1,77 @@
+:root {
+  --spacing: 10px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #dbad6a;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 80%;
+  border-radius: var(--spacing);
+  background-color: #cf995f;
+}
+
+#header {
+  padding: calc(2 * var(--spacing));
+}
+
+#todos {
+  padding: var(--spacing);
+}
+
+#header {
+  border-radius: var(--spacing);
+  background-color: white;
+}
+
+#title {
+  text-align: center;
+}
+
+#todos {
+  margin: 0;
+  list-style-type: none;
+}
+
+#todo > :last-child {
+  margin-bottom: var(--spacing);
+}
+
+#done > :first-child {
+  margin-top: var(--spacing);
+}
+
+.todo-row {
+  min-height: 40px;
+  padding: var(--spacing);
+  border-radius: var(--spacing);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  background-color: #d0ce7c;
+}
+
+.todo-item:not(.checked) {
+  background-color: white;
+}
+
+.todo-item.checked {
+  text-decoration: line-through;
+}
+
+#todo-divider .show-more {
+  margin: 0 var(--spacing);
+}
+
+.todo-item:not(:last-child) {
+  margin-bottom: var(--spacing);
+}
